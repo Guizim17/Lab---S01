@@ -9,12 +9,14 @@ local function gerarTabelaPotencias(inicio, fim, base) -- Funcao
 end
 
 -- variaveis
-local M = tonumber(io.read())
-local N = tonumber(io.read())
+local M = tonumber(io.read())       -- inicio
+local N = tonumber(io.read())       -- fim
 local base = tonumber(io.read())
 
 -- chamar a funcao e imprimir tabela
 local tabela = gerarTabelaPotencias(M, N, base)
+local cont = M                     -- contador para auxiliar no print
 for i = 1, #tabela do
-    print(tabela[i])
+    print(base .. " ^ " .. cont .. " = " .. tabela[i])
+    cont = cont + 1
 end
