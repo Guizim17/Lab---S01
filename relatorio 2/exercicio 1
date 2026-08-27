@@ -1,0 +1,20 @@
+local function gerarTabelaPotencias(inicio, fim, base) -- Funcao
+    local resultado                                    -- resultado da operacao
+    local tabelaF = {}                                 -- tabela dentro da funcao
+    for j = inicio, fim do                             -- for para fazer a conta
+        resultado = base ^ j                          
+        table.insert(tabelaF, resultado)
+    end
+    return tabelaF                                     -- retornar a tabela
+end
+
+-- variaveis
+local M = tonumber(io.read())
+local N = tonumber(io.read())
+local base = tonumber(io.read())
+
+-- chamar a funcao e imprimir tabela
+local tabela = gerarTabelaPotencias(M, N, base)
+for i = 1, #tabela do
+    print(tabela[i])
+end
