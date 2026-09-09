@@ -5,20 +5,20 @@ func main(){
 	var v1, v2, v3 int			// vendas 1 2 e 3
 	fmt.Scan(&v1, &v2, &v3)		// ler vendas
 	total := v1 + v2 + v3		// definir valor total
-	if(total < 100){			// metao nao atingida
+	if(total < 100){			// meta nao atingida
 		fmt.Println("Meta minima anual nao atingida!")
 	}
 
-	// printa total antes de definir a Classificacao
-	fmt.Println("Total de vendas: ", total)
+	// printa total antes de definir a categoria
+	fmt.Println("Total de vendas: ", total, " unidades")
 
-	// switch sem expressao - define e printa o Classificacao
+	// switch sem expressao - define e printa a categoria
 	switch{
 	case total >= 250:
-		fmt.Print("Classificacao: Top Seller")
+		fmt.Print("Classificacao: Categoria Top Seller")
 	case total >= 180:
-		fmt.Print("Classificacao: Senior")
+		fmt.Print("Classificacao: Categoria Senior")
 	case total >= 100:
-		fmt.Print("Classificacao: Pleno")
+		fmt.Print("Classificacao: Categoria Pleno")
 	}
 }
