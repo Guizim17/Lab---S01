@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int combinarEquipes(int n){
+    if(n <= 0){             // para n = 0 e trava para valores negativos
+        return 0;
+    }else if(n == 1){       // para n = 1
+        return 1;
+    }else{                  // para n > 1
+        return combinarEquipes(n - 1) + combinarEquipes(n - 2);
+    }
+}
+
+int main(){
+    int N;                           // tamanho no chaveamento  
+    cin >> N;                        // inserir o tamanho do chaveamento
+    cout << combinarEquipes(N);     // enviar valor para a funcao
+}
