@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int max;    // capacidade maxima do drone
+    cout << "Capacidade maxida do drone: ";
+    cin >> max;
+    int atual = 0;      // peso atual
+    int opcao;          // opcao para o menu
+    bool menu = true;   // bool para manter o menu ativo
+    int adc;            // adicionar valor
+    int dim;            // diminuir valor
+    
+    // menu
+    while(menu){
+        cout << "1. Vertificar Carga Atual." << endl;
+        cout << "2. Carregar Pacote." << endl;
+        cout << "3. Descarregar Pacote." << endl;
+        cout << "4. Encerrar Operacao." << endl;
+        
+        cin >> opcao;   // digitar opcao
+        switch(opcao){
+            case 1:
+                cout << atual << " kg." << endl;
+            break;
+            case 2:
+                cin >> adc;
+                if(atual + adc > max){
+                    cout << "Alerta: Peso maximo de decolagem excedido! Operacao cancelada." << endl;
+                }else{
+                    atual += adc;
+                }
+            break;
+            case 3:
+                cin >> dim;
+                if(dim > atual){
+                    cout << "Alerta: Operacao invalida." << endl;
+                }else{
+                    atual -= dim;
+                }
+                break;
+            case 4:
+                menu = false;
+                break;
+        }
+    }
+
+
+    return 0;
+}
