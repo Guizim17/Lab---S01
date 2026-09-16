@@ -15,4 +15,6 @@ int main(){
     int N;                           // tamanho no chaveamento  
     cin >> N;                        // inserir o tamanho do chaveamento
     cout << combinarEquipes(N);     // enviar valor para a funcao
+
+return 0;
 }
