@@ -10,20 +10,19 @@ class Banda{
         int energia;
 
     public:
-        Banda(string n, int i, float p, int e){
-            nome = n;
-            integrantes = i;
-            potenciaSom = p;
-            energia = e;
-        }
+        Banda(string n, int i, float p, int e):     // lista de inicializacao
+            nome(n), integrantes(i), potenciaSom(p), energia(e){}
 
-    void duelar(Banda& Rival){
-        cout << "O confronto sera entre " << nome << " vs " << Rival.nome << endl;
-        energia -= Rival.potenciaSom;
-        Rival.energia -= potenciaSom;
-        cout << "Energia Restante " << nome << ": " << energia << endl;
-        cout << "Energia Restante " << Rival.nome << ": " << Rival.energia << endl;
-    }
+
+        void duelar(Banda& Rival){
+            cout << "O confronto sera entre " << nome << " vs " << Rival.nome << endl;
+            // calcula a energia
+            energia -= Rival.potenciaSom;
+            Rival.energia -= potenciaSom;
+
+            cout << "Energia restante " << nome << ": " << energia << endl;
+            cout << "Energia restante " << Rival.nome << ": " << Rival.energia << endl;
+        }
 };
 
 int main() {
