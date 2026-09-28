@@ -11,7 +11,7 @@ public:
     MembroInatel(string n) : nome(n) {}
 
     virtual void seApresentar() const{
-        cout <<  "Sou um membro da comunidade Inatel: [nome]." << endl;
+        cout <<  "Sou um membro da comunidade Inatel: << nome << "." << endl;
     }
 
     virtual ~MembroInatel() = default;
