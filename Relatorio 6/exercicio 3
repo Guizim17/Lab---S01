@@ -45,8 +45,11 @@ int main(){
     Aluno a("Guilherme", "Software");
     Professor p("Ruan", "Paradigmas");
 
-    a.seApresentar();
-    p.seApresentar();
+    vector<MembroInatel*> pessoas = {&a, &p};
+
+    for(MembroInatel* p : pessoas){
+        p->seApresentar();
+    }
 
     return 0;
 }
