@@ -25,7 +25,7 @@ public:
     Aluno(string n, string c) : MembroInatel(n), curso(c) {}
 
     void seApresentar() const override{
-        cout << "Meu nome é " << nome << " e estudo no curso de " << curso << "." << endl;
+        cout << "Meu nome e " << nome << " e estudo no curso de " << curso << "." << endl;
     }
 };
 
@@ -37,7 +37,7 @@ public:
     Professor(string n, string d) : MembroInatel(n), disciplina(d) {}
 
    void seApresentar() const override{
-    cout << "Meu nome é " << nome << " e leciono a disciplina de " << disciplina << "." << endl;
+    cout << "Meu nome e " << nome << " e leciono a disciplina de " << disciplina << "." << endl;
    }
 };
 
